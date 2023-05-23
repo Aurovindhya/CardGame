@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+			integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Customizable Deck of Cards</h1>
+			<div>
+				<button id="generate-button">1. Generate Deck</button>
+				<br />
+				<br />
+				<label for="guess-card">2. Guess the next card:</label>
+				<select id="guess-card" disabled>
+					<option value="red">Red</option>
+					<option value="black">Black</option>
+				</select>
+				<button id="check-guess" disabled onclick="drawCard(2)">
+					Check
+				</button>
+				<br />
+				<br />
+				<label for="guess-card-3"
+					>3. Guess if the next card will be:</label
+				>
+				<select id="guess-card-3" disabled>
+					<option value="higher">Higher</option>
+					<option value="lower">Lower</option>
+					<option value="equal">Equal</option>
+				</select>
+				<button id="check-guess-3" disabled onclick="drawCard(3)">
+					Check
+				</button>
+				<br />
+				<br />
+				<label for="guess-card-4"
+					>4. Guess if the next card will be:</label
+				>
+				<select id="guess-card-4" disabled>
+					<option value="HEARTS">Hearts</option>
+					<option value="DIAMONDS">Diamonds</option>
+					<option value="CLUBS">Clubs</option>
+					<option value="SPADES">Spades</option>
+				</select>
+				<button id="check-guess-4" disabled onclick="drawCard(4)">
+					Check
+				</button>
+				<br />
+				<br />
+				<div id="final-text" style="visibility: hidden">
+					Keep trying your luck with questions 2,3,4 for a high score
+				</div>
+			</div>
+
+			<div id="card-container"></div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
